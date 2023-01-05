@@ -1,28 +1,3 @@
-/**===========================================================================
-  Copyright (C) ALMSound Technologies Co., Ltd. All rights reserved.
-
-  @file     aba_protocol.h
-  @brief    ±¾ÎÄ¼þÊÇÓÃÓÚBLEÖ÷´Ó¶ËÖ®¼ä¹ã²¥Êý¾ÝÍ¨ÐÅÐ­Òé£¨ALM BLE Advertise Protocol£©
-  @author   Leung
-  @version  r0.6
-  @date     2020/03/20
-  @license ALMSound (ALM)
-----------------------------------------------------------------------------
-  Remark: (±¸×¢ÃèÊö)
-----------------------------------------------------------------------------
-                                History
-----------------------------------------------------------------------------
-  <Date>     | <Version> | <Author>       | <Description>
--------------|-----------|----------------|---------------------------------
-  2019/12/31 | r0.1      | Leung          | ´´½¨
--------------|-----------|----------------|---------------------------------
-  2019/12/31 | r0.2      | xiaobu         | Ìí¼Ó´Å¸Ð¼ÆÊý¸æ¾¯
--------------|-----------|----------------|---------------------------------
-             |           |                |
--------------|-----------|----------------|---------------------------------
-             |           |                |
-============================================================================*/
-
 #ifndef _ABA_PROTOCOL_H_
 #define _ABA_PROTOCOL_H_
 
@@ -34,117 +9,117 @@
 /*********************************************************************
  * DEFINITIONS
  */
-#define ADV_DATA_TYPE_EVT_LOG					0x06	// Êý¾Ý°üÀàÐÍ£ºÊÂ¼þÈÕÖ¾¹ã²¥
+#define ADV_DATA_TYPE_EVT_LOG					0x06	// ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ö¾ï¿½ã²¥
 
-#define DEV_TYPE_SWITCH							0x01    // ¿ª¹Ø
-#define DEV_TYPE_PLUG							0x02    // ²å×ù
-#define DEV_TYPE_LOCK                   		0x03    // Ëø
-#define DEV_TYPE_MAGNET_SWITCH					0x04    // ÃÅ´°´«¸ÐÆ÷
-#define DEV_TYPE_MAGNET_COUNTER					0x40    // ´Å¸Ð¼ÆÊýÆ÷
-#define DEV_TYPE_GATEWAY						0x80    // Íø¹Ø
-#define DEV_TYPE_TEMP_SENSOR                    0x41    // ÎÂ¶È´«¸ÐÆ÷
-#define DEV_TYPE_DIMMING						0x50	// µÆ¶Ëµ÷¹âÆ÷
+#define DEV_TYPE_SWITCH							0x01    // ï¿½ï¿½ï¿½ï¿½
+#define DEV_TYPE_PLUG							0x02    // ï¿½ï¿½ï¿½ï¿½
+#define DEV_TYPE_LOCK                   		0x03    // ï¿½ï¿½
+#define DEV_TYPE_MAGNET_SWITCH					0x04    // ï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define DEV_TYPE_MAGNET_COUNTER					0x40    // ï¿½Å¸Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½
+#define DEV_TYPE_GATEWAY						0x80    // ï¿½ï¿½ï¿½ï¿½
+#define DEV_TYPE_TEMP_SENSOR                    0x41    // ï¿½Â¶È´ï¿½ï¿½ï¿½ï¿½ï¿½
+#define DEV_TYPE_DIMMING						0x50	// ï¿½Æ¶Ëµï¿½ï¿½ï¿½ï¿½ï¿½
 
-#define EVT_TYPE_FIRST_OPEN						0x01    // µÚÒ»Â·¿ª
-#define EVT_TYPE_SECOND_OPEN					0x02    // µÚ¶þÂ·¿ª
-#define EVT_TYPE_THIRD_OPEN						0x03    // µÚÈýÂ·¿ª
-#define EVT_TYPE_FOURTH_OPEN					0x04    // µÚËÄÂ·¿ª
-#define EVT_TYPE_FIRST_CLOSE					0x05    // µÚÒ»Â·¹Ø
-#define EVT_TYPE_SECOND_CLOSE					0x06    // µÚ¶þÂ·¹Ø
-#define EVT_TYPE_THIRD_CLOSE					0x07    // µÚÈýÂ·¹Ø
-#define EVT_TYPE_FOURTH_CLOSE					0x08    // µÚËÄÂ·¹Ø
-#define EVT_TYPE_SECURITY_WARN					0x09    // ·À»¤Ä£Ê½¸æ¾¯
-#define EVT_TYPE_LOW_POWER_WARN					0x21    // µÍµçÁ¿¸æ¾¯
-#define EVT_TYPE_MAGNET_COUNT_WARN				0x31    // ´Å¸Ð¼ÆÊý¸æ¾¯
+#define EVT_TYPE_FIRST_OPEN						0x01    // ï¿½ï¿½Ò»Â·ï¿½ï¿½
+#define EVT_TYPE_SECOND_OPEN					0x02    // ï¿½Ú¶ï¿½Â·ï¿½ï¿½
+#define EVT_TYPE_THIRD_OPEN						0x03    // ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+#define EVT_TYPE_FOURTH_OPEN					0x04    // ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+#define EVT_TYPE_FIRST_CLOSE					0x05    // ï¿½ï¿½Ò»Â·ï¿½ï¿½
+#define EVT_TYPE_SECOND_CLOSE					0x06    // ï¿½Ú¶ï¿½Â·ï¿½ï¿½
+#define EVT_TYPE_THIRD_CLOSE					0x07    // ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+#define EVT_TYPE_FOURTH_CLOSE					0x08    // ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+#define EVT_TYPE_SECURITY_WARN					0x09    // ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½æ¾¯
+#define EVT_TYPE_LOW_POWER_WARN					0x21    // ï¿½Íµï¿½ï¿½ï¿½ï¿½æ¾¯
+#define EVT_TYPE_MAGNET_COUNT_WARN				0x31    // ï¿½Å¸Ð¼ï¿½ï¿½ï¿½ï¿½æ¾¯
 
-#define ADV_DEV_TYPE_LOCATION					3		// ¹ã²¥Êý¾Ý°üÖÐÉè±¸ÀàÐÍÎ»ÖÃ
-#define EVT_TIME_STAMP_LEN						4		// Ê±¼ä´Á³¤¶È
-#define EVT_ONE_TYPE_LEN_LOCATION       		4		// ¸ù¾ÝÊµ¼Êµ÷Õû
-#define EVT_ONE_TYPE_LEN						5		// ¸ù¾ÝÊµ¼Êµ÷Õû
-#define EVT_TWO_TYPE_LEN_LOCATION				10		// ¸ù¾ÝÊµ¼Êµ÷Õû
-#define EVT_TWO_TYPE_LEN						5		// ¸ù¾ÝÊµ¼Êµ÷Õû
-#define EVT_THREE_TYPE_LEN_LOCATION				16		// ¸ù¾ÝÊµ¼Êµ÷Õû
-#define EVT_THREE_TYPE_LEN						6		// ¸ù¾ÝÊµ¼Êµ÷Õû
+#define ADV_DEV_TYPE_LOCATION					3		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+#define EVT_TIME_STAMP_LEN						4		// Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define EVT_ONE_TYPE_LEN_LOCATION       		4		// ï¿½ï¿½ï¿½ï¿½Êµï¿½Êµï¿½ï¿½ï¿½
+#define EVT_ONE_TYPE_LEN						5		// ï¿½ï¿½ï¿½ï¿½Êµï¿½Êµï¿½ï¿½ï¿½
+#define EVT_TWO_TYPE_LEN_LOCATION				10		// ï¿½ï¿½ï¿½ï¿½Êµï¿½Êµï¿½ï¿½ï¿½
+#define EVT_TWO_TYPE_LEN						5		// ï¿½ï¿½ï¿½ï¿½Êµï¿½Êµï¿½ï¿½ï¿½
+#define EVT_THREE_TYPE_LEN_LOCATION				16		// ï¿½ï¿½ï¿½ï¿½Êµï¿½Êµï¿½ï¿½ï¿½
+#define EVT_THREE_TYPE_LEN						6		// ï¿½ï¿½ï¿½ï¿½Êµï¿½Êµï¿½ï¿½ï¿½
 
-#define STS_TYPE_SINGLE_SWITCH					0x01	// µ¥±äÁ¿¿ª¹Ø
-#define STS_TYPE_DOUBLE_SWITCH					0x02	// Ë«±äÁ¿¿ª¹Ø
-#define STS_TYPE_TREBLE_SWITCH					0x03	// Èý±äÁ¿¿ª¹Ø
-#define STS_TYPE_FOURFOLD_SWITCH				0x04	// ËÄ±äÁ¿¿ª¹Ø
-#define STS_TYPE_SWITCH_AND_DELAY				0x05	// ¿ª¹Ø+µ¹¼ÆÊ±×´Ì¬
-#define STS_TYPE_COUNTER						0x06	// ·´Ëø×´Ì¬
-#define STS_TYPE_SECURITY_AND_SWITCH			0x07	// ·À»¤Ä£Ê½+¿ª¹Ø
-#define STS_TYPE_RMN_CY_PCT						0x21	// Ê£ÓàµçÁ¿°Ù·Ö±È
-#define STS_TYPE_RMN_CY_PCT_AND_SOC				0x22	// Ê£ÓàµçÁ¿°Ù·Ö±È+³äµç×´Ì¬
-#define STS_TYPE_MAGNET_COUNT_1					0x31	// ´Å¸Ð¼ÆÊý1
-#define STS_TYPE_MAGNET_COUNT_2					0x32	// ´Å¸Ð¼ÆÊý2
-#define STS_TYPE_MAGNET_COUNT_3					0x33	// ´Å¸Ð¼ÆÊý3
+#define STS_TYPE_SINGLE_SWITCH					0x01	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define STS_TYPE_DOUBLE_SWITCH					0x02	// Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define STS_TYPE_TREBLE_SWITCH					0x03	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define STS_TYPE_FOURFOLD_SWITCH				0x04	// ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define STS_TYPE_SWITCH_AND_DELAY				0x05	// ï¿½ï¿½ï¿½ï¿½+ï¿½ï¿½ï¿½ï¿½Ê±×´Ì¬
+#define STS_TYPE_COUNTER						0x06	// ï¿½ï¿½ï¿½ï¿½×´Ì¬
+#define STS_TYPE_SECURITY_AND_SWITCH			0x07	// ï¿½ï¿½ï¿½ï¿½Ä£Ê½+ï¿½ï¿½ï¿½ï¿½
+#define STS_TYPE_RMN_CY_PCT						0x21	// Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù·Ö±ï¿½
+#define STS_TYPE_RMN_CY_PCT_AND_SOC				0x22	// Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù·Ö±ï¿½+ï¿½ï¿½ï¿½×´Ì¬
+#define STS_TYPE_MAGNET_COUNT_1					0x31	// ï¿½Å¸Ð¼ï¿½ï¿½ï¿½1
+#define STS_TYPE_MAGNET_COUNT_2					0x32	// ï¿½Å¸Ð¼ï¿½ï¿½ï¿½2
+#define STS_TYPE_MAGNET_COUNT_3					0x33	// ï¿½Å¸Ð¼ï¿½ï¿½ï¿½3
 
-#define SR_DEV_TYPE_LOCATION            		2		// É¨ÃèÏìÓ¦°üÖÐÉè±¸ÀàÐÍÎ»ÖÃ
-#define STS_ONE_TYPE_LOCATION					3		// É¨ÃèÏìÓ¦°üÖÐ×´Ì¬Ò»ÀàÐÍÎ»ÖÃ
-#define STS_ONE_PARAM_1_LOCATION				4		// É¨ÃèÏìÓ¦°üÖÐ×´Ì¬Ò»²ÎÊý1Î»ÖÃ
-#define STS_ONE_PARAM_2_LOCATION				5		// É¨ÃèÏìÓ¦°üÖÐ×´Ì¬Ò»²ÎÊý2Î»ÖÃ
-#define STS_TWO_TYPE_LOCATION					6		// É¨ÃèÏìÓ¦°üÖÐ×´Ì¬¶þÀàÐÍÎ»ÖÃ
+#define SR_DEV_TYPE_LOCATION            		2		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+#define STS_ONE_TYPE_LOCATION					3		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½×´Ì¬Ò»ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+#define STS_ONE_PARAM_1_LOCATION				4		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½×´Ì¬Ò»ï¿½ï¿½ï¿½ï¿½1Î»ï¿½ï¿½
+#define STS_ONE_PARAM_2_LOCATION				5		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½×´Ì¬Ò»ï¿½ï¿½ï¿½ï¿½2Î»ï¿½ï¿½
+#define STS_TWO_TYPE_LOCATION					6		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 #define STS_TWO_PARAM_1_LOCATION				7		
 #define STS_TWO_PARAM_2_LOCATION				8		
-#define STS_THREE_TYPE_LOCATION					9		// É¨ÃèÏìÓ¦°üÖÐ×´Ì¬ÈýÀàÐÍÎ»ÖÃ
+#define STS_THREE_TYPE_LOCATION					9		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 #define STS_THREE_PARAM_1_LOCATION				10
 #define STS_THREE_PARAM_2_LOCATION				11
 #define STS_THREE_PARAM_3_LOCATION				12
 #define STS_THREE_PARAM_4_LOCATION				13
-#define STS_FOUR_TYPE_LOCATION					14		// É¨ÃèÏìÓ¦°üÖÐ×´Ì¬ËÄÀàÐÍÎ»ÖÃ
+#define STS_FOUR_TYPE_LOCATION					14		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 #define STS_FOUR_PARAM_1_LOCATION				15
 #define STS_FOUR_PARAM_2_LOCATION				16
 #define STS_FOUR_PARAM_3_LOCATION				17
 #define STS_FOUR_PARAM_4_LOCATION				18
 
-/* --------------- Í¬²½ --------------- */
-// Ö÷»ú
-#define ADV_SYNC_OFFSET_LOCATION				3		// ¹ã²¥Êý¾Ý°üÖÐÍ¬²½Æ«ÒÆÁ¿Î»ÖÃ
-#define ADV_APPID_STARTING_LOCATION				4		// ¹ã²¥Êý¾Ý°üÖÐAPPIDÆðÊ¼Î»ÖÃ£¬³¤2×Ö½Ú
-#define ADV_SYNC_PARAM_STARTING_LOCATION		12		// ¹ã²¥Êý¾Ý°üÖÐÍ¬²½²ÎÊýÆðÊ¼Î»ÖÃ£¬³¤6×Ö½Ú
+/* --------------- Í¬ï¿½ï¿½ --------------- */
+// ï¿½ï¿½ï¿½ï¿½
+#define ADV_SYNC_OFFSET_LOCATION				3		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Æ«ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+#define ADV_APPID_STARTING_LOCATION				4		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½APPIDï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½2ï¿½Ö½ï¿½
+#define ADV_SYNC_PARAM_STARTING_LOCATION		12		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½6ï¿½Ö½ï¿½
 
-/* --------------- ÅäÍø --------------- */
-// ´Ó»ú
-#define STS_JOIN_NETWORK_LOCATION				2		// É¨ÃèÏìÓ¦°üÖÐ×´Ì¬ÀàÐÍÅäÍø±êÊ¶Î»ÖÃ
-#define JOIN_NETWORK_INFO_STARTING_LOCATION		3		// É¨ÃèÏìÓ¦°üÖÐÉêÇëÆ¥ÅäµÄÖ÷»úMACµØÖ·/ÅäÍøÑéÖ¤ÂëÆðÊ¼Î»ÖÃ£¬³¤6×Ö½Ú
-#define BITWISE_OFFSET_LOCATION					9		// É¨ÃèÏìÓ¦°üÖÐÎ»Ñ¡×Ö½ÚÆ«ÒÆÎ»ÖÃ
-#define SINGLE_BIT_SELECT_CODE_LOCATION			10		// É¨ÃèÏìÓ¦°üÖÐµ¥×Ö½ÚÎ»Ñ¡ÂëÎ»ÖÃ
-#define NO_JOIN_NETWORK_YET						0x01	// ´Ó»úÎ´ÅäÍø
-#define JOIN_NETWORK_ALREADY					0x02	// ´Ó»úÒÑÅäÍø
-// Ö÷»ú
-#define ADV_DOMAIN_ADDR_STARTING_LOCATION		6		// ¹ã²¥Êý¾Ý°üÖÐÅäÍøÂë£¨ÓòµØÖ·£©ÆðÊ¼Î»ÖÃ£¬³¤6×Ö½Ú
-#define ADV_MAC_1_STARTING_LOCATION				14		// ¹ã²¥Êý¾Ý°üÖÐÀ¶ÑÀMACµØÖ·1ÆðÊ¼Î»ÖÃ£¬³¤6×Ö½Ú
-#define ADV_GROUP_SERIAL_NUM_1_LOCATION			20		// ¹ã²¥Êý¾Ý°üÖÐÈº×éÐòºÅ1Î»ÖÃ
-#define ADV_MAC_2_STARTING_LOCATION				21		// ¹ã²¥Êý¾Ý°üÖÐÀ¶ÑÀMACµØÖ·2ÆðÊ¼Î»ÖÃ£¬³¤6×Ö½Ú
-#define ADV_GROUP_SERIAL_NUM_2_LOCATION			27		// ¹ã²¥Êý¾Ý°üÖÐÈº×éÐòºÅ2Î»ÖÃ
-#define PRIMARY_SYNC_JOIN_NETWORK				0x80	// Ö÷Í¬²½ÅäÍø
-#define SECONDARY_SYNC_JOIN_NETWORK				0x00	// ×ÓÍ¬²½ÅäÍø
-#define PRIMARY_SYNC_NO_JOIN_NETWORK			0x81	// Ö÷Í¬²½Î´ÅäÍø
-#define SECONDARY_SYNC_NO_JOIN_NETWORK			0x01	// ×ÓÍ¬²½Î´ÅäÍø
+/* --------------- ï¿½ï¿½ï¿½ï¿½ --------------- */
+// ï¿½Ó»ï¿½
+#define STS_JOIN_NETWORK_LOCATION				2		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶Î»ï¿½ï¿½
+#define JOIN_NETWORK_INFO_STARTING_LOCATION		3		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MACï¿½ï¿½Ö·/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½6ï¿½Ö½ï¿½
+#define BITWISE_OFFSET_LOCATION					9		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Î»Ñ¡ï¿½Ö½ï¿½Æ«ï¿½ï¿½Î»ï¿½ï¿½
+#define SINGLE_BIT_SELECT_CODE_LOCATION			10		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ö½ï¿½Î»Ñ¡ï¿½ï¿½Î»ï¿½ï¿½
+#define NO_JOIN_NETWORK_YET						0x01	// ï¿½Ó»ï¿½Î´ï¿½ï¿½ï¿½ï¿½
+#define JOIN_NETWORK_ALREADY					0x02	// ï¿½Ó»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// ï¿½ï¿½ï¿½ï¿½
+#define ADV_DOMAIN_ADDR_STARTING_LOCATION		6		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¨ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½6ï¿½Ö½ï¿½
+#define ADV_MAC_1_STARTING_LOCATION				14		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MACï¿½ï¿½Ö·1ï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½6ï¿½Ö½ï¿½
+#define ADV_GROUP_SERIAL_NUM_1_LOCATION			20		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½Èºï¿½ï¿½ï¿½ï¿½ï¿½1Î»ï¿½ï¿½
+#define ADV_MAC_2_STARTING_LOCATION				21		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MACï¿½ï¿½Ö·2ï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½6ï¿½Ö½ï¿½
+#define ADV_GROUP_SERIAL_NUM_2_LOCATION			27		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½Èºï¿½ï¿½ï¿½ï¿½ï¿½2Î»ï¿½ï¿½
+#define PRIMARY_SYNC_JOIN_NETWORK				0x80	// ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define SECONDARY_SYNC_JOIN_NETWORK				0x00	// ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define PRIMARY_SYNC_NO_JOIN_NETWORK			0x81	// ï¿½ï¿½Í¬ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½
+#define SECONDARY_SYNC_NO_JOIN_NETWORK			0x01	// ï¿½ï¿½Í¬ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½
 
-// ÊÖ»ú
-#define RESTORE_FACTORY_SETING_NETWORK			0xA0	// ³ö³§ÉèÖÃ
-#define MOBILE_SET_JOIN_NETWORK					0xB0	// ÉèÖÃÍøÂçIDºÍÐòÂë
+// ï¿½Ö»ï¿½
+#define RESTORE_FACTORY_SETING_NETWORK			0xA0	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define MOBILE_SET_JOIN_NETWORK					0xB0	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-/* --------------- Èº¿Ø --------------- */
-// ´Ó»ú
-#define SR_SWITCH_TYPE_LOCATION					14		// É¨ÃèÏìÓ¦°üÖÐ¿ª¹Ø×´Ì¬ÀàÐÍÎ»ÖÃ
-#define SR_SWITCH_VALUE_STARTING_LOCATION		15		// É¨ÃèÏìÓ¦°üÖÐ¿ª¹Ø×´Ì¬ÖµÆðÊ¼Î»ÖÃ£¬³¤¶È¸ù¾Ý¿ª¹ØÀàÐÍ±ä»¯
-// Ö÷»ú
-#define ADV_GROUP_CTRL_CODE_STARTING_LOCATION	12		// ¹ã²¥Êý¾Ý°üÖÐÈº¿Ø¶àÑ¡ÂëÆðÊ¼Î»ÖÃ£¬³¤8×Ö½Ú
-#define ADV_SWITCH_TYPE_LOCATION				21		// ¹ã²¥Êý¾Ý°üÖÐ¿ª¹Ø×´Ì¬ÀàÐÍÎ»ÖÃ
-#define ADV_SWITCH_VALUE_STARTING_LOCATION		22		// ¹ã²¥Êý¾Ý°üÖÐ¿ª¹Ø×´Ì¬ÖµÆðÊ¼Î»ÖÃ£¬³¤¶È¸ù¾Ý¿ª¹ØÀàÐÍ±ä»¯
-#define PRIMARY_SYNC_GROUP_CTRL					0x85	// Ö÷Í¬²½Èº¿Ø
-#define SECONDARY_SYNC_GROUP_CTRL				0x05	// ×ÓÍ¬²½Èº¿Ø
-#define SECONDARY_SYNC_SIGLE_CTRL				0x03	// ×ÓÍ¬²½µ¥¿Ø
-#define PRIMARY_SYNC_SIGLE_CTRL					0x83	// Ö÷Í¬²½µ¥¿Ø
+/* --------------- Èºï¿½ï¿½ --------------- */
+// ï¿½Ó»ï¿½
+#define SR_SWITCH_TYPE_LOCATION					14		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+#define SR_SWITCH_VALUE_STARTING_LOCATION		15		// É¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½×´Ì¬Öµï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ä»¯
+// ï¿½ï¿½ï¿½ï¿½
+#define ADV_GROUP_CTRL_CODE_STARTING_LOCATION	12		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½ï¿½Èºï¿½Ø¶ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½8ï¿½Ö½ï¿½
+#define ADV_SWITCH_TYPE_LOCATION				21		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+#define ADV_SWITCH_VALUE_STARTING_LOCATION		22		// ï¿½ã²¥ï¿½ï¿½ï¿½Ý°ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½×´Ì¬Öµï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ä»¯
+#define PRIMARY_SYNC_GROUP_CTRL					0x85	// ï¿½ï¿½Í¬ï¿½ï¿½Èºï¿½ï¿½
+#define SECONDARY_SYNC_GROUP_CTRL				0x05	// ï¿½ï¿½Í¬ï¿½ï¿½Èºï¿½ï¿½
+#define SECONDARY_SYNC_SIGLE_CTRL				0x03	// ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define PRIMARY_SYNC_SIGLE_CTRL					0x83	// ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 /*********************************************************************
  * TYPEDEFS
  */
 typedef struct
 {
-    uint8_t countValue[2];								// ´Å¸Ð¼ÆÊýÖµ
+    uint8_t countValue[2];								// ï¿½Å¸Ð¼ï¿½ï¿½ï¿½Öµ
 } MagnetCount_t;
 
 #endif /* _ABA_PROTOCOL_H_ */
